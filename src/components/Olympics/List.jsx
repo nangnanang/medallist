@@ -8,7 +8,7 @@ const List=({ele, list, setList})=>{
     
     setList(deleteData)
     console.log(deleteData)
-    // localStorage.setItem('medal', JSON.stringify(deleteData))
+    localStorage.setItem('medal', JSON.stringify(deleteData))
   }
   return (<tr>
       <td>{ele.country}</td>

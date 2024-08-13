@@ -5,7 +5,6 @@ import Th from './Th'
 //메달 리스트 출력(Read) + 정렬(Sort) 부분
 const Table = ({ list, setList }) => {
   const nameArr = ['국가명', '금메달', '은메달', '동메달', '총합', '기능']
-  // const outputArr = JSON.parse(localStorage.getItem('medal'))||[]
   return (
   <div className='tableDiv'>
     <table>

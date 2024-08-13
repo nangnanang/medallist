@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Header from './Header'
 import MedalInput from './MedalInput'
 import Table from './Table'
 
 const Olympics = () => {
   // state 부분
-  const [list, setList] = useState([])
+  const [list, setList] = useState(JSON.parse(localStorage.getItem('medal'))||[])
   const [country, setCountry] = useState('')
   const [gold, setGold] = useState(0)
   const [silver, setSilver] = useState(0)
@@ -59,7 +59,7 @@ const Olympics = () => {
       inputReset()
     } else {
       setList([...list,newList])
-      // localStorage.setItem('medal', JSON.stringify(list))
+      localStorage.setItem('medal', JSON.stringify([...list,newList]))
       inputReset()
     }
   }
@@ -79,7 +79,7 @@ const Olympics = () => {
     if(countryData.includes(country)) {
       list.splice(updateDataIndex,1,updateData)
       setList([...list])
-      // localStorage.setItem('medal', JSON.stringify(list))
+      localStorage.setItem('medal', JSON.stringify(list))
       inputReset()
     } else if(!country) {
       alert('국가명을 입력하시오')
