@@ -7,16 +7,31 @@ App 컴포넌트를 연결함
 다시 App.jsx에
 Header 컴포넌트, MedalInput 컴포넌트, Table 컴포넌트를 연결하고 전체적인 ui를 구성함
 
+App.jsx
+├─Header.jsx
+├─<form>
+│ ├─MedalInput.jsx <-input 데이터 유효성 검사
+│ ├─<button>추가 <-로컬 스토리지에 데이터 변경 반영
+│ └─<button>업데이트 <-로컬 스토리지에 데이터 변경 반영
+└─Table.jsx
+│ ├─Th.jsx
+│ └─List.jsx <-정렬
+│ │ └─<button>삭제 <-로컬 스토리지에 데이터 변경 반영
+
+주요 기능 -추가 -업데이트 -삭제
+
+서브 기능 -정렬 -input 데이터 유효성 검사 -로컬 스토리지에 이전 데이터 저장
+
 Header 컴포넌트는 제목
 
 MedalInput 컴포넌트는
 필요한 것들을 모아 만든 객체 배열 dataArr를 map으로 돌려서
 생성한 input 박스 컴포넌트
 
-Table 컴포넌트는 입력한 데이터가 출력되는 아웃풋 컴포넌트로
+Table 컴포넌트는 입력한 데이터가 출력되는 '아웃풋' 컴포넌트로
 Th.jsx와 List.jsx의 컴포넌트를 가지고 구성됨
-두 컴포넌트 다 map으로 돌렸고,
-금메달의 수로 아웃풋 데이터를 정렬하기 위해 List.jsx에는 map을 돌리기 전 sort를 적용했음
+두 컴포넌트 다 'map'으로 돌렸고,
+금메달의 수로 아웃풋 데이터를 '정렬'하기 위해 List.jsx에는 map을 돌리기 전 'sort'를 적용했음
 
 1. jsx 문법이란?
    jsx 문법이란 기존 js에 html을 더한 것으로

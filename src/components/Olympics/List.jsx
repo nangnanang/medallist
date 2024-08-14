@@ -7,7 +7,6 @@ const List=({ele, list, setList})=>{
     const deleteData = list.filter((li)=>li.id!==ele.id)
     
     setList(deleteData)
-    console.log(deleteData)
     localStorage.setItem('medal', JSON.stringify(deleteData))
   }
   return (<tr>
