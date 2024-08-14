@@ -103,8 +103,9 @@ const Olympics = () => {
           <button type='button' onClick={updateList}>업데이트</button>
         </div>
       </form>
-      <Table list={list} setList={setList} />
-      
+      {list.length === 0 ? (
+        <p>아직 데이터가 없습니다</p>
+      ) : (<Table list={list} setList={setList} />)}
     </div>
   )
 }
